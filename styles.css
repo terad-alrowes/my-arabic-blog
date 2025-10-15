@@ -74,18 +74,21 @@ nav ul li a:hover {
   color: white;
   padding: 120px 20px;
   animation: fadeIn 2s ease-in-out;
-  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* طبقة خفيفة خلف النص فقط */
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* طبقة ظل لتحسين وضوح النص */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
 }
 
 .hero * {
@@ -104,106 +107,10 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-/* المقالات */
-#articles {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.article {
-  background: #f9f9f9;
-  padding: 20px;
-  margin: 20px auto;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.article:hover {
-  transform: translateY(-5px);
-}
-
-.article h3 {
-  color: #004d40;
-}
-
-.article a {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #00796b;
-  font-weight: bold;
-}
-
-.article a:hover {
-  color: #004d40;
-}
-
-/* من نحن */
-#about {
-  background-color: #eee;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-/* الاتصال */
-#contact {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-form {
-  width: 80%;
-  max-width: 500px;
-  margin: auto;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-}
-
-form label {
-  display: block;
-  margin: 10px 0 5px;
-  text-align: right;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-form button {
-  background: #004d40;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  transition: 0.3s;
-}
-
-form button:hover {
+.btn {
   background: #00796b;
-}
-
-/* الفوتر */
-footer {
-  background-color: #004d40;
   color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* أنيميشن */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
