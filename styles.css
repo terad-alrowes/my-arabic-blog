@@ -66,29 +66,29 @@ nav ul li a:hover {
   }
 }
 
-/* الهيرو */
+/* الواجهة (Hero Section) */
 .hero {
   position: relative;
   text-align: center;
   background: url('https://raw.githubusercontent.com/terad-alrowes/my-arabic-blog/refs/heads/main/hero-banner.png') no-repeat center center/cover;
   color: white;
-  padding: 120px 20px;
-  animation: fadeIn 2s ease-in-out;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+  overflow: hidden;
 }
 
-/* طبقة خفيفة خلف النص فقط */
+/* تدرج أسفل الصورة */
 .hero::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.05));
+  z-index: 0;
 }
 
 .hero * {
@@ -97,20 +97,118 @@ nav ul li a:hover {
 }
 
 .hero h2 {
-  font-size: 40px;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  font-size: 48px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 22px;
+  max-width: 700px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
 }
 
-.btn {
-  background: #00796b;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 5px;
+/* المقالات */
+#articles {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.article {
+  background: #f9f9f9;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.article:hover {
+  transform: translateY(-5px);
+}
+
+.article h3 {
+  color: #004d40;
+}
+
+.article a {
+  display: inline-block;
+  margin-top: 10px;
   text-decoration: none;
-  font-size: 16px;
+  color: #00796b;
+  font-weight: bold;
+}
+
+.article a:hover {
+  color: #004d40;
+}
+
+/* من نحن */
+#about {
+  background-color: #eee;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* الاتصال */
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: right;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background: #004d40;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #00796b;
+}
+
+/* الفوتر */
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* أنيميشن */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
