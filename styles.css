@@ -68,17 +68,24 @@ nav ul li a:hover {
 
 /* الهيرو */
 .hero {
-  text-align: center;
-.hero {
+  position: relative;
   text-align: center;
   background: url('https://raw.githubusercontent.com/terad-alrowes/my-arabic-blog/refs/heads/main/hero-banner.jpg') no-repeat center center/cover;
   color: white;
   padding: 120px 20px;
   animation: fadeIn 2s ease-in-out;
 }
-  color: white;
-  padding: 120px 20px;
-  animation: fadeIn 2s ease-in-out;
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h2 {
@@ -90,19 +97,6 @@ nav ul li a:hover {
 .hero p {
   font-size: 18px;
   margin-bottom: 20px;
-}
-
-.btn {
-  background: #00796b;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.3s;
-}
-.btn:hover {
-  background: #004d40;
 }
 
 /* المقالات */
@@ -208,4 +202,3 @@ footer {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
