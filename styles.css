@@ -69,7 +69,13 @@ nav ul li a:hover {
 /* الهيرو */
 .hero {
   text-align: center;
-  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+.hero {
+  text-align: center;
+  background: url('https://raw.githubusercontent.com/terad-alrowes/my-arabic-blog/refs/heads/main/hero-banner.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 120px 20px;
+  animation: fadeIn 2s ease-in-out;
+}
   color: white;
   padding: 120px 20px;
   animation: fadeIn 2s ease-in-out;
@@ -202,3 +208,4 @@ footer {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
