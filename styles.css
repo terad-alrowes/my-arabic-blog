@@ -70,17 +70,22 @@ nav ul li a:hover {
 .hero {
   position: relative;
   text-align: center;
-  background: url('https://raw.githubusercontent.com/terad-alrowes/my-arabic-blog/refs/heads/main/hero-banner.jpg') no-repeat center center/cover;
+  background: url('https://raw.githubusercontent.com/terad-alrowes/my-arabic-blog/refs/heads/main/hero-banner.png') no-repeat center center/cover;
   color: white;
   padding: 120px 20px;
   animation: fadeIn 2s ease-in-out;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.45); /* طبقة ظل لتحسين وضوح النص */
 }
 
 .hero * {
